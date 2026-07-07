@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre | EcoTrack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="menu-container">
+    <div class="menu-icon">☰</div>
+    <div class="sidebar">
+        <div>
+            <div class="sidebar-top">
+                <h2>EcoTrack</h2>
+            </div>
+            <div class="sidebar-links">
+                <a href="home.html">🏠 Home</a>
+                <a href="sobre.html">📖 Sobre</a>
+                <a href="exp_ods13.html">ODS 13</a>
+                <a href="solucoes.html">✅ Soluções</a>
+                <a href="contatos.html">📞 Contato</a>
+            </div>
+        </div>
+        <div class="sidebar-footer">
+            <p>Instagram</p>
+            <a href="#">@ecotrack.oficial</a>
+        </div>
+    </div>
+</div>
+
+<header>
+    <h1>EcoTrack</h1>
+    <button class="dark-toggle" onclick="toggleDark()">🌙</button>
+</header>
+
+<section>
+    <div class="card hero">
+        <h2>Sobre o Projeto</h2>
+        <p>Conheça a proposta e a missão do EcoTrack.</p>
+    </div>
+</section>
+
+<div class="divisao"></div>
+
+<section>
+    <div class="card">
+        <h2>Quem Somos</h2>
+        <p>Somos um grupo de estudantes que desenvolveu o EcoTrack como parte de um projeto acadêmico com foco em sustentabilidade e tecnologia.
+        Unimos conhecimentos de desenvolvimento web e conscientização ambiental para criar uma ferramenta que aproxima as pessoas do tema da mudança climática.</p>
+    </div>
+</section>
+
+<div class="divisao"></div>
+
+<section>
+    <div class="card">
+        <h2>Nosso Propósito</h2>
+        <p>Nosso propósito é conscientizar as pessoas sobre a importância de práticas sustentáveis no dia a dia, incentivando pequenas mudanças de comportamento que geram grande impacto no combate às mudanças climáticas. Acreditamos que informação de qualidade é o primeiro passo para uma ação real.</p>
+    </div>
+</section>
+
+<div class="divisao"></div>
+
+<section>
+    <div class="card">
+        <h2>Nossa Missão</h2>
+        <p>Mais do que informar, queremos transformar consciência em ação. Cada usuário que reduz seu consumo, repensa seus hábitos ou compartilha o que aprendeu contribui para um movimento coletivo rumo a um futuro mais sustentável.</p>
+
+        <p>O gráfico abaixo mostra de onde vêm as emissões globais de CO2 — e reforça por que pequenas mudanças de comportamento, somadas, fazem toda a diferença.</p>
+
+        <div class="grafico-container">
+          <canvas id="graficoEmissoes"></canvas>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-conteudo">
+        <div class="footer-col">
+            <h3>EcoTrack</h3>
+            <p>Projeto baseado na ODS 13 da ONU</p>
+        </div>
+        <div class="footer-col">
+            <h3>Contato</h3>
+            <p>📧 ecotrack@gmail.com</p>
+            <p>📸 @ecotrack.oficial</p>
+        </div>
+        <div class="footer-col">
+            <h3>Integrantes</h3>
+            <p>Grupo EcoTrack</p>
+            <p>© 2026</p>
+        </div>
+    </div>
+</footer>
+
+<button class="btn-topo" id="btn-topo" onclick="voltarTopo()">▲</button>
+
+<script src="animacao.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('graficoEmissoes');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Energia', 'Transporte', 'Indústria', 'Agropecuária', 'Outros'],
+      datasets: [{
+        label: 'Participação nas emissões globais de CO2 (%)',
+        data: [27, 15, 11, 11, 36],
+        backgroundColor: '#14532d'
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } }
+    }
+  });
+</script>
+</body>
+</html>
