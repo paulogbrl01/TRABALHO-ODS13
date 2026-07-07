@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ana Beatriz ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#5a002c,#7a003c,#9c004d,#c2185b);
+color:white;
+text-align:center;
+min-height:100vh;
+overflow-x:hidden;
+}
+
+.loading{
+position:fixed;
+width:100%;
+height:100%;
+background:#3a001b;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:2rem;
+z-index:9999;
+animation:sumir 3s forwards;
+}
+
+@keyframes sumir{
+80%{opacity:1;}
+100%{
+opacity:0;
+visibility:hidden;
+}
+}
+
+.coracao-fundo{
+position:fixed;
+color:rgba(0,0,0,0.22);
+pointer-events:none;
+user-select:none;
+z-index:-1;
+}
+
+.c1{top:5%;left:3%;font-size:70px;}
+.c2{top:12%;right:8%;font-size:120px;}
+.c3{top:35%;left:8%;font-size:90px;}
+.c4{top:55%;right:10%;font-size:160px;}
+.c5{bottom:15%;left:15%;font-size:110px;}
+.c6{bottom:8%;right:5%;font-size:80px;}
+.c7{top:75%;left:40%;font-size:140px;}
+.c8{top:25%;left:45%;font-size:60px;}
+.c9{top:50%;left:50%;font-size:100px;}
+.c10{bottom:25%;right:30%;font-size:130px;}
+
+.container{
+padding:40px 20px;
+}
+
+h1{
+font-size:3rem;
+color:#ffd1dc;
+text-shadow:0 0 15px rgba(255,182,193,.8);
+margin-bottom:10px;
+}
+
+.linha{
+width:220px;
+height:5px;
+background:#ffb6c1;
+margin:0 auto 25px;
+border-radius:10px;
+}
+
+.foto{
+width:250px;
+height:250px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #ffb6c1;
+margin:20px auto;
+display:block;
+box-shadow:0 0 30px rgba(255,182,193,.5);
+}
+
+.card{
+max-width:950px;
+margin:auto;
+background:rgba(0,0,0,.25);
+backdrop-filter:blur(12px);
+padding:30px;
+border-radius:25px;
+border:2px solid #ffb6c1;
+box-shadow:0 0 25px rgba(0,0,0,.4);
+}
+
+.contador{
+font-size:1.3rem;
+margin:20px 0;
+}
+
+button{
+padding:12px 25px;
+margin:5px;
+border:none;
+border-radius:30px;
+background:black;
+color:white;
+cursor:pointer;
+transition:.3s;
+border:2px solid #ffb6c1;
+font-weight:bold;
+}
+
+button:hover{
+background:#ffb6c1;
+color:black;
+transform:scale(1.08);
+box-shadow:0 0 20px #ffb6c1;
+}
+
+.aba{
+margin-top:20px;
+line-height:1.9;
+animation:aparecer .5s;
+}
+
+@keyframes aparecer{
+from{
+opacity:0;
+transform:translateY(15px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+#surpresa{
+display:none;
+margin-top:20px;
+font-size:1.3rem;
+}
+
+.heart{
+position:fixed;
+top:-20px;
+font-size:25px;
+animation:cair linear forwards;
+pointer-events:none;
+}
+
+@keyframes cair{
+to{
+transform:translateY(110vh);
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="coracao-fundo c1">🖤</div>
+<div class="coracao-fundo c2">🖤</div>
+<div class="coracao-fundo c3">🖤</div>
+<div class="coracao-fundo c4">🖤</div>
+<div class="coracao-fundo c5">🖤</div>
+<div class="coracao-fundo c6">🖤</div>
+<div class="coracao-fundo c7">🖤</div>
+<div class="coracao-fundo c8">🖤</div>
+<div class="coracao-fundo c9">🖤</div>
+<div class="coracao-fundo c10">🖤</div>
+
+<div class="loading">
+❤️ Carregando nossa história...
+</div>
+
+<div class="container">
+
+<h1>❤️ Ana Beatriz ❤️</h1>
+
+<div class="linha"></div>
+
+<img src="foto.jpg" class="foto" alt="">
+
+<div class="card">
+
+<h2>Para o amor da minha vida ❤️</h2>
+
+<div class="contador">
+Estamos juntos há:
+<br><br>
+<span id="tempo"></span>
+</div>
+
+<button onclick="abrirAba('carta')">💌 Carta</button> <button onclick="abrirAba('sobre')">❤️ Sobre Você</button> <button onclick="abrirAba('motivos')">🌹 Motivos</button> <button onclick="abrirAba('historia')">📖 Nossa História</button> <button onclick="abrirAba('futuro')">✨ Nosso Futuro</button>
+
+<div id="carta" class="aba">
+
+<h2>💌 Carta Principal</h2>
+
+<p>Ana Beatriz,</p>
+<p>Te amo infinitamente.</p>
+<p>Você é uma das melhores coisas que já aconteceram na minha vida.</p>
+<p>Seu sorriso ilumina meus dias, seu abraço me traz paz e sua presença torna tudo melhor.</p>
+<p>Obrigado por cada momento ao seu lado.</p>
+<p>Você é muito especial para mim. ❤️</p>
+
+</div>
+
+<div id="sobre" class="aba" style="display:none;">
+
+<h2>❤️ Sobre Você ❤️</h2>
+
+<p>Gosto muito de você.</p>
+<p>O amor que sinto por você é algo totalmente inexplicável por palavras.</p>
+<p>Por mais que não iremos passar esse Dia dos Namorados juntos, quero te dizer que te amo muito e você é muito especial para mim.</p>
+<p>Mesmo sendo branca ksks. 🤍😂</p>
+<p>Amo seu jeito engraçado, sua risada, tudo.</p>
+<p>Amo tudo em você. ❤️</p>
+
+</div>
+
+<div id="motivos" class="aba" style="display:none;">
+
+<h2>🌹 Motivos Pelos Quais Eu Te Amo 🌹</h2>
+
+<p>❤️ Seu sorriso.</p>
+<p>❤️ Sua cor ksks.</p>
+<p>❤️ Seu cheiro.</p>
+<p>❤️ Seu abraço.</p>
+<p>❤️ Seu beijo nem se fala.</p>
+<p>❤️ Seu jeito engraçado.</p>
+<p>❤️ Sua risada.</p>
+<p>❤️ Sua companhia.</p>
+<p>❤️ Seu carinho.</p>
+<p>❤️ Porque você é você.</p>
+
+</div>
+
+<div id="historia" class="aba" style="display:none;">
+
+<h2>📖 Nossa História 📖</h2>
+
+<p>🏫 Nos conhecemos na escola.</p>
+<p>💋 Nosso primeiro beijo foi inesquecível.</p>
+<p>❤️ Em 05/02/2026 começamos a namorar.</p>
+<p>🛍️ Nosso primeiro passeio foi no shopping.</p>
+<p>✨ E desde então criamos várias memórias especiais juntos.</p>
+
+</div>
+
+<div id="futuro" class="aba" style="display:none;">
+
+<h2>✨ Nosso Futuro ✨</h2>
+
+<p>Meu sonho é continuar construindo uma história ao seu lado.</p>
+<p>Se Deus quiser, vamos construir uma família juntos.</p>
+<p>Quero continuar sendo feliz com você e criar muitas lembranças incríveis.</p>
+<p>Você é a pessoa com quem quero compartilhar minha vida. ❤️</p>
+
+<button onclick="mostrarSurpresa()">🎁 Abrir Surpresa</button>
+
+<div id="surpresa">
+💖 Você é o amor da minha vida. 💖
+<br><br>
+🌹 Eu te amo infinitamente, Ana Beatriz. 🌹
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const dataNamoro = new Date("2026-02-05");
+
+function atualizarTempo(){
+const hoje = new Date();
+const diferenca = hoje - dataNamoro;
+const dias = Math.floor(diferenca/(1000*60*60*24));
+const anos = Math.floor(dias/365);
+const meses = Math.floor((dias%365)/30);
+const diasRestantes = (dias%365)%30;
+document.getElementById("tempo").innerHTML =
+`${anos} anos, ${meses} meses e ${diasRestantes} dias ❤️`;
+}
+
+atualizarTempo();
+setInterval(atualizarTempo,1000);
+
+function abrirAba(id){
+document.getElementById("carta").style.display="none";
+document.getElementById("sobre").style.display="none";
+document.getElementById("motivos").style.display="none";
+document.getElementById("historia").style.display="none";
+document.getElementById("futuro").style.display="none";
+document.getElementById(id).style.display="block";
+}
+
+function mostrarSurpresa(){
+document.getElementById("surpresa").style.display="block";
+}
+
+function criarCoracao(){
+const heart = document.createElement("div");
+heart.classList.add("heart");
+const emojis = ["❤️","💖","💕","🖤"];
+heart.innerHTML = emojis[Math.floor(Math.random()*emojis.length)];
+heart.style.left = Math.random()*window.innerWidth + "px";
+heart.style.animationDuration = (Math.random()*3 + 3) + "s";
+document.body.appendChild(heart);
+setTimeout(()=>{ heart.remove(); },6000);
+}
+
+setInterval(criarCoracao,250);
+
+</script>
+
+</body>
+</html>
