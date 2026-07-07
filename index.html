@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTrack | Home</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body class="page-home">
+
+<div class="menu-container">
+    <div class="menu-icon">☰</div>
+    <div class="sidebar">
+        <div>
+            <div class="sidebar-top">
+                <h1>EcoTrack</h1>
+            </div>
+            <div class="sidebar-links">
+                <a href="home.html">🏠 Home</a>
+                <a href="sobre.html">📖 Sobre</a>
+                <a href="exp_ods13.html">🌍 ODS 13</a>
+                <a href="solucoes.html">✅ Soluções</a>
+                <a href="contatos.html">📞 Contato</a>
+            </div>
+        </div>
+        <div class="sidebar-footer">
+            <p>Instagram</p>
+            <a href="#">@ecotrack.oficial</a>
+        </div>
+    </div>
+</div>
+
+<!-- BANNER COM HEADER TRANSPARENTE -->
+<div class="banner-wrapper">
+    <header>
+        
+        <h1> EcoTrack</h1>
+        <button class="dark-toggle" onclick="toggleDark()">🌙</button>
+    </header>
+    <section class="banner">
+        <div class="banner-overlay">
+            <h2> O futuro do planeta depende das escolhas de hoje</h2>
+            <p>Conscientização, sustentabilidade e ação contra as mudanças climáticas.</p>
+        </div>
+    </section>
+</div>
+
+<!-- IMAGEM DIAGONAL 1 -->
+<div class="img-diagonal img-direita">
+    <img src="gay.jpg" alt="Natureza">
+</div>
+
+<!-- BOAS-VINDAS -->
+<section class="hero-section">
+    <div class="card hero">
+        <h2>Bem-vindo ao EcoTrack</h2>
+        <p>Uma solução digital criada para conscientizar sobre os impactos ambientais e incentivar práticas sustentáveis.</p>
+    </div>
+</section>
+
+<div class="divisao"></div>
+
+<!-- SOBRE O PROJETO -->
+<section>
+    <div class="card">
+        <h2>Sobre o Projeto</h2>
+        <p>O EcoTrack é um projeto baseado na ODS 13 da ONU, focado no combate às mudanças climáticas. Nossa proposta busca conscientizar as pessoas sobre como pequenas ações do dia a dia podem impactar diretamente o planeta.</p>
+    </div>
+</section>
+
+<div class="divisao"></div>
+
+<!-- IMAGEM DIAGONAL 2 -->
+<div class="img-diagonal img-esquerda">
+    <img src="sla.jpg" alt="Poluição">
+</div>
+
+<!-- O PROBLEMA -->
+<section>
+    <div class="card">
+        <h2>O Problema</h2>
+        <p>O aumento da emissão de gases poluentes tem acelerado o aquecimento global, provocando mudanças climáticas severas, eventos extremos e impactos ambientais em escala global. Segundo a ONU, a temperatura média do planeta já subiu mais de 1.1°C desde a era pré-industrial.</p>
+    </div>
+</section>
+
+<div class="divisao"></div>
+
+<!-- NOSSO OBJETIVO -->
+<section>
+    <div class="card">
+        <h2>Nosso Objetivo</h2>
+        <p>Promover conscientização, incentivar hábitos sustentáveis e oferecer ferramentas que ajudem as pessoas a entenderem melhor seu impacto ambiental — alinhado às metas da ODS 13 da ONU.</p>
+    </div>
+</section>
+
+<div class="divisao"></div>
+
+<!-- CALCULADORA -->
+<section>
+    <div class="card hero">
+        <h2>🧮 Calculadora de Pegada de Carbono</h2>
+        <p>Descubra seu impacto ambiental preenchendo os campos abaixo.</p>
+
+        <input type="number" id="ar" placeholder="Horas por dia usando ar-condicionado">
+        <input type="number" id="carro" placeholder="Km por dia usando carro">
+        <input type="number" id="lixo" placeholder="Lixo por semana (kg)">
+
+        <button class="action" onclick="calcularImpacto()">Calcular</button>
+
+        <div class="barra-container" id="barra-container" style="display:none;">
+            <div class="barra-fundo">
+                <div class="barra-progresso" id="barra-progresso"></div>
+            </div>
+            <h3 id="resultado"></h3>
+        </div>
+    </div>
+</section>
+
+<!-- IMAGEM DIAGONAL 3 -->
+<div class="img-diagonal img-direita">
+    <img src="mata.jpeg" alt="Sustentabilidade">
+</div>
+
+<footer>
+    <div class="footer-conteudo">
+        <div class="footer-col">
+            <h3>🌱 EcoTrack</h3>
+            <p>Projeto baseado na ODS 13 da ONU</p>
+        </div>
+        <div class="footer-col">
+            <h3>Contato</h3>
+            <p>📧 ecotrack@gmail.com</p>
+            <p>📸 @ecotrack.oficial</p>
+        </div>
+        <div class="footer-col">
+            <h3>Integrantes</h3>
+            <p>Grupo EcoTrack</p>
+            <p>© 2026</p>
+        </div>
+    </div>
+</footer>
+
+<button class="btn-topo" id="btn-topo" onclick="voltarTopo()">▲</button>
+
+<script src="animacao.js"></script>
+<script>
+/* Calculadora de pegada de carbono com barra de progresso colorida */
+function calcularImpacto() {
+    let ar = Number(document.getElementById("ar").value);
+    let carro = Number(document.getElementById("carro").value);
+    let lixo = Number(document.getElementById("lixo").value);
+    let total = ar + carro + lixo;
+    let resultado = document.getElementById("resultado");
+    let barra = document.getElementById("barra-progresso");
+    let container = document.getElementById("barra-container");
+
+    container.style.display = "block";
+
+    let porcentagem = Math.min((total / 100) * 100, 100);
+    barra.style.width = porcentagem + "%";
+
+    if (total < 20) {
+        resultado.innerHTML = "🟢 Impacto Baixo";
+        barra.style.background = "#16a34a";
+    } else if (total < 50) {
+        resultado.innerHTML = "🟡 Impacto Médio";
+        barra.style.background = "#ca8a04";
+    } else {
+        resultado.innerHTML = "🔴 Impacto Alto";
+        barra.style.background = "#dc2626";
+    }
+}
+</script>
+</body>
+</html>
